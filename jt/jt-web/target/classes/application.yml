@@ -1,0 +1,16 @@
+server:
+  port: 8092    
+spring:     #定义springmvc视图解析器
+  mvc:    view:      prefix: /WEB-INF/views/
+      suffix: .jsp
+dubbo:
+  application:
+    name: jt-web
+  protocol:
+    name: dubbo
+    port: 8001
+  registry:
+    #address: zookeeper://127.0.0.1:2181
+    address: zookeeper://192.168.162.4:2184?backup=192.168.162.4:2182,192.168.162.4:2183
+
+  
